@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anouar Aitbouthaykte - Brand Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #F8F7F5; /* Soft beige background */
+        }
+        .font-heading {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-signature {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* A4 Page Styling for Screen */
+        .a4-page {
+            width: 100%;
+            max-width: 1024px; /* A4-like width for screen */
+            min-height: 1448px; /* A4-like height for screen */
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2.5rem;
+            padding: 4rem 5rem;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            position: relative;
+            overflow: hidden; /* Hide screen overflow */
+        }
+
+        /* Updated Gold Color Palette */
+        .gold-accent {
+            color: #C9A975; /* A richer, more elegant gold */
+        }
+        .border-gold {
+            border-color: #C9A975;
+        }
+        .bg-gold {
+            background-color: #C9A975;
+        }
+        
+        /* CORRECTED Print Styles */
+        @media print {
+            body {
+                background-color: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .a4-page {
+                width: 210mm;
+                max-width: 210mm;
+                min-height: 297mm; /* Use min-height, not fixed height */
+                height: auto; /* Allow content to flow beyond one page */
+                margin: 0;
+                padding: 1.5cm;
+                box-shadow: none;
+                overflow: visible; /* Show all content, don't clip */
+                page-break-after: always; /* Separate sections onto new pages */
+            }
+            .a4-page:last-child {
+                page-break-after: avoid;
+            }
+            #print-button {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+
+    <!-- Print Button -->
+    <button id="print-button" class="fixed top-4 right-4 bg-gray-800 text-white py-2 px-5 rounded-md text-sm font-medium hover:bg-black shadow-lg z-50 transition-colors font-heading">
+        Print to PDF
+    </button>
+
+    <!-- Page 1: Cover Page -->
+    <div class="a4-page flex flex-col justify-between">
+        <!-- Watermark -->
+        <div class="absolute inset-0 flex items-center justify-center z-0 overflow-hidden">
+            <span class="font-heading font-bold text-[30rem] text-gray-50" style="letter-spacing: -0.5rem;">AA</span>
+        </div>
+        
+        <!-- Content -->
+        <header class="z-10"></header> <!-- Spacer -->
+        <main class="z-10 text-center">
+            <h1 class="font-heading text-6xl font-bold mb-4 text-gray-900">Anouar Aitbouthaykte</h1>
+            <h2 class="font-heading text-3xl font-medium text-gray-700 mb-8 tracking-widest uppercase">Graphic Designer & Brand Builder</h2>
+            <p class="text-2xl font-light text-gray-500 italic">“Where design solves problems and builds identity.”</p>
+        </main>
+        
+        <footer class="z-10 border-t border-gray-200 pt-8">
+            <div class="flex flex-wrap justify-between items-center text-gray-600 text-sm gap-4">
+                <div class="flex items-center space-x-2 whitespace-nowrap">
+                    <svg class="w-4 h-4 gold-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <span>Marrakech, Morocco</span>
+                </div>
+                <div class="flex items-center space-x-2 whitespace-nowrap">
+                    <svg class="w-4 h-4 gold-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <span>Willing to relocate: Yes</span>
+                </div>
+                <div class="flex items-center space-x-2 whitespace-nowrap">
+                    <svg class="w-4 h-4 gold-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span>+212 649 801 419</span>
+                </div>
+                <div class="flex items-center space-x-2 whitespace-nowrap">
+                    <svg class="w-4 h-4 gold-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>planetvape@example.com</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Page 2: About Me -->
+    <div class="a4-page">
+        <h1 class="font-heading text-5xl font-bold mb-16 text-center text-gray-900">About Me</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <!-- Text -->
+            <div class="md:col-span-7">
+                <p class="text-xl leading-relaxed text-gray-700 mb-6">
+                    I am a creative brand builder and graphic designer who believes that great design is, first and foremost, a tool for solving business problems.
+                </p>
+                <p class="text-xl leading-relaxed text-gray-700">
+                    Based in Marrakech and inspired by international design, my passion is transforming complex challenges into simple, meaningful, and effective visual systems. For over 8 years, I have partnered with brands to build their identities from the ground up, connecting strategy with creativity to deliver results.
+                </p>
+            </div>
+            
+            <!-- Photo Placeholder -->
+            <div class="md:col-span-5">
+                <img src="https://placehold.co/400x400/E2E8F0/9CA3AF?text=Anouar+A." alt="Anouar Aitbouthaykte Portrait" class="w-full aspect-square object-cover rounded-lg border-4 border-gold/30 shadow-md">
+            </div>
+        </div>
+
+        <hr class="border-gray-100 my-16">
+
+        <!-- Design Philosophy -->
+        <div class="mb-16">
+            <h3 class="font-heading text-3xl font-semibold text-center mb-10 text-gray-900">My Design Philosophy</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-4">
+                    <h4 class="font-heading text-xl font-semibold mb-3 gold-accent">Strategy Before Art</h4>
+                    <p class="text-gray-600 leading-relaxed">I create designs that don't just look good, but also achieve specific business goals.</p>
+                </div>
+                <div class="text-center p-4">
+                    <h4 class="font-heading text-xl font-semibold mb-3 gold-accent">Simplicity is Clarity</h4>
+                    <p class="text-gray-600 leading-relaxed">A clean, minimal approach cuts through the noise and delivers a clear message.</p>
+                </div>
+                <div class="text-center p-4">
+                    <h4 class="font-heading text-xl font-semibold mb-3 gold-accent">Build Lasting Systems</h4>
+                    <p class="text-gray-600 leading-relaxed">I don't just deliver a logo; I deliver a complete brand system that can grow with you.</p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="border-gray-100 my-16">
+
+        <!-- Highlight Cards -->
+        <!-- UPDATED to 4 columns -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-200">
+                <span class="font-heading text-5xl gold-accent mb-3 block">🎓</span>
+                <h3 class="font-heading text-xl font-semibold mb-2 text-gray-900">Diploma in Graphic Design</h3>
+                <p class="text-gray-600">LaSalle College (Moroccan-Canadian accredited)</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-200">
+                <span class="font-heading text-5xl gold-accent mb-3 block">🌐</span>
+                <h3 class="font-heading text-xl font-semibold mb-2 text-gray-900">3 Languages</h3>
+                <p class="text-gray-600">Arabic (Native), English (Fluent), French (Intermediate)</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-200">
+                <span class="font-heading text-5xl gold-accent mb-3 block">💼</span>
+                <h3 class="font-heading text-xl font-semibold mb-2 text-gray-900">8+ Years of Experience</h3>
+                <p class="text-gray-600">Brand Identity & Digital Content Creation</p>
+            </div>
+            <!-- NEW 4th CARD ADDED -->
+            <div class="bg-gray-50 rounded-lg p-8 transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-200">
+                <span class="font-heading text-5xl gold-accent mb-3 block">🎨</span>
+                <h3 class="font-heading text-xl font-semibold mb-2 text-gray-900">Core Services</h3>
+                <p class="text-gray-600">Brand Identity, UI/UX Design, & Print/Packaging</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Featured Project - Planet of the Vape -->
+    <div class="a4-page">
+        <!-- Project 1: Planet of the Vape -->
+        <div class="mb-10">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="font-heading text-5xl font-bold text-gray-900">Planet of the Vape</h2>
+                    <p class="font-heading text-2xl font-medium text-gray-700 mt-1">Store Manager & Graphic Designer</p>
+                </div>
+                <img src="https://i.imgur.com/g0QkY7j.png" alt="Planet of the Vape Logo" class="h-24 w-24 bg-black p-2 rounded-full object-contain shadow-md">
+            </div>
+            <p class="text-lg text-gray-700 mb-6">As the creative lead, I built the entire brand identity from scratch, including the logo, color system, and comprehensive graphic charter. My role extended beyond visuals; I designed and developed a custom management application with advanced analytics and a user-friendly dashboard to solve key business operations challenges. I continue to manage and create all Instagram content and video promotions, ensuring the brand stays modern and engaging.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Challenge</h4>
+                    <p class="text-gray-700 text-sm">To build a complete, modern brand identity from scratch and solve operational inefficiencies.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Solution</h4>
+                    <p class="text-gray-700 text-sm">A full visual system and a custom UI/UX dashboard, creating a cohesive brand and a powerful business tool.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Result</h4>
+                    <p class="text-gray-700 text-sm">Established market leadership and a custom dashboard that increased operational efficiency by an estimated 40%.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Storefront+Signage" alt="Storefront Signage Mockup" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Storefront Signage Mockup</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Packaging+Mockups" alt="Packaging Mockups" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Packaging Mockups</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Product+Catalog" alt="Product Catalog" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Product Catalog</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Tri-fold+Brochure" alt="Tri-fold Brochure" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Tri-fold Brochure</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Stationery+Set" alt="Business Card and Stationery" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Business Card and Stationery</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Instagram+Post" alt="Instagram Post/Banner" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Instagram Post/Banner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Featured Project - Islah Travaux -->
+    <div class="a4-page">
+        <!-- Project 2: Islah Travaux -->
+        <div class="mb-10">
+             <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="font-heading text-5xl font-bold text-gray-900">Islah Travaux</h2>
+                    <p class="font-heading text-2xl font-medium text-gray-700 mt-1">Graphic Designer</p>
+                </div>
+                <img src="https://placehold.co/150x100/333333/FFFFFF?text=ISLAH" alt="Islah Travaux Logo" class="h-24 object-contain">
+            </div>
+            <p class="text-lg text-gray-700 mb-6">I was entrusted with the complete overhaul of the company's visual identity. The challenge was to solve existing design inconsistencies and elevate the brand's professionalism. I designed and implemented a new, comprehensive graphic charter and logo, successfully transforming their visual assets to reflect the quality of their work and meet evolving market needs.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Challenge</h4>
+                    <p class="text-gray-700 text-sm">The company's visual identity was outdated, inconsistent, and lacked professionalism.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Solution</h4>
+                    <p class="text-gray-700 text-sm">A complete brand overhaul, delivering a new logo and graphic charter that inspired trust and elevated their market position.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Result</h4>
+                    <p class="text-gray-700 text-sm">A professional, trustworthy brand identity that led to a significant increase in client confidence and higher-value project inquiries.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Stationery+Mockup" alt="Stationery Mockup" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Stationery Mockup</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Site+Signage" alt="Construction Site Signage" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Construction Site Signage</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Brochure+Layout" alt="Brochure Layout" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Brochure Layout</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Project+Catalog" alt="Project Catalog" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Project Catalog (A4)</p>
+                </div>
+                <div class="sm:col-span-2">
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Logo+Wall+Mockup" alt="Logo Wall Mockup" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Logo Wall Mockup</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Featured Project - UPM Marrakech -->
+    <div class="a4-page">
+        <!-- Project 3: UPM Marrakech -->
+        <div class="mb-10">
+             <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="font-heading text-5xl font-bold text-gray-900">UPM Marrakech</h2>
+                    <p class="font-heading text-2xl font-medium text-gray-700 mt-1">Senior Graphic Designer</p>
+                </div>
+                <img src="https://placehold.co/150x100/990000/FFFFFF?text=UPM" alt="UPM Marrakech Logo" class="h-20 object-contain">
+            </div>
+            <p class="text-lg text-gray-700 mb-6">As Senior Graphic Designer, I was brought in to revitalize the university's visual identity, which had reached a creative plateau. I led the design modernization, infusing fresh creativity and strategic branding. My role involved creating clean marketing visuals, new templates, and ads to ensure brand consistency and align all materials with the company's forward-thinking vision.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Challenge</h4>
+                    <p class="text-gray-700 text-sm">The university's marketing materials had reached a creative plateau and lacked a consistent, modern vision.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Solution</h4>
+                    <p class="text-gray-700 text-sm">A design revitalization, infusing fresh creativity and strategic branding to align all visuals with their forward-thinking goals.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading text-lg font-bold gold-accent mb-2">The Result</h4>
+                    <p class="text-gray-700 text-sm">A unified, modern brand image that improved student engagement and elevated the university's public perception.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=University+Brochure" alt="University Brochure" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">University Brochure</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Academic+Catalog" alt="Academic Catalog" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Academic Catalog</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Stationery+Set" alt="Stationery Set" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Stationery Set</p>
+                </div>
+                <div>
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Campus+Signage" alt="Campus Signage" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Campus Signage</p>
+                </div>
+                <div class="sm:col-span-2">
+                    <img src="https://placehold.co/600x400/F3F4F6/9CA3AF?text=Social+Media+Post" alt="Social Media Post" class="w-full aspect-video object-cover rounded-md border border-gray-200">
+                    <p class="text-center text-sm text-gray-500 mt-2">Social Media Post</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Skills, Process & Quote -->
+    <div class="a4-page flex flex-col">
+        <h1 class="font-heading text-5xl font-bold mb-16 text-center text-gray-900">Skills & Expertise</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+            <div>
+                <h3 class="font-heading text-2xl font-semibold mb-6 border-l-4 border-gold pl-4 text-gray-900">Design & Branding</h3>
+                <ul class="text-lg text-gray-700 space-y-3 list-disc list-inside">
+                    <li>Brand Strategy & Identity</li>
+                    <li>Logo Design & Visual Systems</li>
+                    <li>Advanced Typography & Layout</li>
+                    <li>Packaging Design</li>
+                    <li>Print & Editorial Design</li>
+                    <li>Catalog Creation</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-heading text-2xl font-semibold mb-6 border-l-4 border-gold pl-4 text-gray-900">Digital & Marketing</h3>
+                <ul class="text-lg text-gray-700 space-y-3 list-disc list-inside">
+                    <li>Social Media Branding</li>
+                    <li>Content Creation & Visual Strategy</li>
+                    <li>Promotional Video Editing</li>
+                    <li>Digital Ad Design (Google Ads)</li>
+                    <li>UI/UX Design (Web & App)</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-heading text-2xl font-semibold mb-6 border-l-4 border-gold pl-4 text-gray-900">Software Proficiency</h3>
+                <ul class="text-lg text-gray-700 space-y-3 list-disc list-inside">
+                    <li>Adobe Photoshop (Expert)</li>
+                    <li>Adobe Illustrator (Expert)</li>
+                    <li>Adobe Premiere Pro (Advanced)</li>
+                    <li>Adobe After Effects (Motion)</li>
+                    <li>Figma (UI/UX)</li>
+                    <li>Google Sheets / MS Excel</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-heading text-2xl font-semibold mb-6 border-l-4 border-gold pl-4 text-gray-900">Strategy & Languages</h3>
+                <ul class="text-lg text-gray-700 space-y-3 list-disc list-inside">
+                    <li>Creative Problem-Solving</li>
+                    <li>Project Management</li>
+                    <li>AI Tools Integration</li>
+                    <li>Arabic <span class="text-gray-500">(Native)</span></li>
+                    <li>English <span class="text-gray-500">(Fluent)</span></li>
+                    <li>French <span class="text-gray-500">(Intermediate)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- My Creative Process -->
+        <div class="mt-20">
+            <hr class="border-gray-100 my-16">
+            <h3 class="font-heading text-3xl font-semibold text-center mb-12 text-gray-900">My Creative Process</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <span class="font-heading text-5xl font-bold gold-accent">01.</span>
+                    <h4 class="font-heading text-xl font-semibold my-3 text-gray-900">Discover & Define</h4>
+                    <p class="text-gray-600">Research, Strategy & Brief</p>
+                </div>
+                <div>
+                    <span class="font-heading text-5xl font-bold gold-accent">02.</span>
+                    <h4 class="font-heading text-xl font-semibold my-3 text-gray-900">Design & Develop</h4>
+                    <p class="text-gray-600">Concept, Iteration & Refinement</p>
+                </div>
+                <div>
+                    <span class="font-heading text-5xl font-bold gold-accent">03.</span>
+                    <h4 class="font-heading text-xl font-semibold my-3 text-gray-900">Deliver & Support</h4>
+                    <p class="text-gray-600">Final Assets, Brand Guidelines & Launch</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quote -->
+        <div class="mt-auto pt-16"> <!-- mt-auto pushes this to the bottom -->
+            <hr class="border-gray-100 my-16">
+            <p class="font-heading text-4xl font-semibold text-center leading-normal text-gray-900">
+                “Good design isn’t decoration — <br>it’s <span class="gold-accent">intelligent problem-solving</span>.”
+            </p>
+        </div>
+    </div>
+
+    <!-- Page 7: Testimonials -->
+    <div class="a4-page flex flex-col items-center justify-center">
+        <h1 class="font-heading text-5xl font-bold mb-20 text-center text-gray-900">Testimonials</h1>
+        
+        <div class="w-full max-w-2xl text-center mb-16">
+            <span class="font-heading text-8xl gold-accent">“</span>
+            <p class="font-heading text-3xl leading-relaxed italic text-gray-800 my-6">
+                Planet of the Vape’s branding was a complete success. Anouar delivered a professional, clean, and visually perfect identity.
+            </p>
+            <p class="font-heading text-xl font-semibold text-gray-900 mt-6 mb-8">— CEO, Planet of the Vape</p>
+            <hr class="w-24 h-1 bg-gold opacity-30 mx-auto">
+        </div>
+
+        <div class="w-full max-w-2xl text-center">
+            <span class="font-heading text-8xl gold-accent">“</span>
+            <p class="font-heading text-3xl leading-relaxed italic text-gray-800 my-6">
+                Anouar gave our company a strong, modern, and trustworthy identity when we needed it most.
+            </p>
+            <p class="font-heading text-xl font-semibold text-gray-900 mt-6 mb-8">— Project Manager, Islah Travaux</p>
+            <hr class="w-24 h-1 bg-gold opacity-30 mx-auto">
+        </div>
+    </div>
+    
+    <!-- Page 8: Contact Page -->
+    <div class="a4-page flex flex-col items-center justify-center text-center">
+        <h1 class="font-heading text-5xl font-bold mb-8 text-gray-900">Let’s Create Something<br>Great Together.</h1>
+        
+        <div class="space-y-6 text-2xl font-light text-center mt-16 text-gray-700">
+            <p>📧 <a href="mailto:planetvape@example.com" class="hover:gold-accent transition-colors">planetvape@example.com</a></p>
+            <p>📞 +212 649 801 419</p>
+            <p>🌍 Marrakech, Morocco</p>
+        </div>
+        
+        <div class="flex space-x-8 mt-16">
+            <!-- Social Icons -->
+            <a href="#" title="Instagram" class="text-gray-500 hover:text-black transition-colors">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.669 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.669 4.771 4.919 4.919 1.266.058 1.646.07 4.85.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.305.196-6.484 2.375-6.68 6.68-.058 1.279-.072 1.687-.072 4.947s.014 3.668.072 4.947c.196 4.305 2.375 6.484 6.68 6.68 1.279.058 1.687.072 4.947.072s3.668-.014 4.947-.072c4.305-.196 6.484-2.375 6.68-6.68.058-1.279.072-1.687.072 4.947s-.014-3.668-.072-4.947c-.196-4.305-2.375-6.484-6.68-6.68-1.279-.058-1.687-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44.645-1.44-1.441-1.44z"/></svg>
+            </a>
+            <a href="#" title="Behance" class="text-gray-500 hover:text-black transition-colors">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22.288 7.378h-5.465v1.44h5.465v-1.44zm-2.85 4.239c-.615 0-1.07.416-1.07 1.018s.455 1.018 1.07 1.018c.615 0 1.07-.416 1.07-1.018s-.455-1.018-1.07-1.018zm-2.615-5.679h-5.465v11.721h5.465c0-1.44.753-2.678 2.016-2.678 1.201 0 1.843.957 1.843 2.678h5.466v-1.8c0-3.321-2.078-6.18-5.527-6.18-2.19 0-3.839 1.199-4.803 3.039v-4.78h-3.84v-2.016h3.84v2.016zm.031 3.238v3.007c0 1.14-.152 2.678 2.16 2.678 1.954 0 2.13-1.538 2.13-2.678v-3.007c-.676-1.018-1.62-1.62-2.707-1.62-1.088 0-1.954.602-2.707 1.62v-.001zm-7.23-3.238h-4.624v-2.016h4.624v2.016z"/></svg>
+            </a>
+            <a href="#" title="LinkedIn" class="text-gray-500 hover:text-black transition-colors">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+        </div>
+        
+        <p class="font-signature text-5xl text-gray-900 mt-24">Anouar Aitbouthaykte</p>
+        
+        <div class="absolute bottom-10 left-0 right-0 px-8 md:px-20">
+            <hr class="border-gray-200">
+        </div>
+    </div>
+    
+    <!-- Page 9: Bonus Social Media -->
+    <div class="a4-page">
+        <h1 class="font-heading text-5xl font-bold mb-6 text-center text-gray-900">Bonus Assets</h1>
+        <h2 class="font-heading text-2xl font-medium text-gray-500 mb-12 text-center">Promotional Visuals for <span class="text-black">Planet of the Vape</span></h2>
+        
+        <!-- Web Banner -->
+        <h3 class="font-heading text-xl font-semibold mb-4 text-gray-900">Web Banner / Ad</h3>
+        <img src="https://placehold.co/1200x514/F3F4F6/9CA3AF?text=Web+Banner" alt="Planet of the Vape Web Banner" class="w-full aspect-[21/9] object-cover rounded-lg shadow-lg mb-10 border border-gray-200">
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Instagram Posts -->
+            <div class="md:col-span-8">
+                <h3 class="font-heading text-xl font-semibold mb-4 text-gray-900">Instagram Post Grid</h3>
+                <img src="https://placehold.co/800x800/F3F4F6/9CA3AF?text=Instagram+Grid" alt="Planet of the Vape Instagram Grid" class="w-full aspect-square object-cover rounded-lg shadow-lg border border-gray-200">
+            </div>
+            
+            <!-- Instagram Story -->
+            <div class="md:col-span-4">
+                <h3 class="font-heading text-xl font-semibold mb-4 text-gray-900">Instagram Story</h3>
+                <img src="https://placehold.co/540x960/F3F4F6/9CA3AF?text=Instagram+Story" alt="Planet of the Vape Instagram Story" class="w-full aspect-[9/16] object-cover rounded-lg shadow-lg border border-gray-200">
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for Print Button -->
+    <script>
+        document.getElementById('print-button').addEventListener('click', () => {
+            window.print();
+        });
+    </script>
+</body>
+</html>
+
+
